@@ -15,6 +15,7 @@
 - GET http://localhost:3000/api/v1/patients
 
 ### Architecture
+```
 ├── Gemfile
 ├── Gemfile.lock
 ├── README.md
@@ -27,3 +28,4 @@
     ├── invoices_controller.rb
     ├── patients_controller.rb
     └── versions_controller.rb
+```

@@ -7,7 +7,7 @@
 ### How to run the project in development
 1. bundle install
 2. bundle exec puma -C config/puma.rb
-3. Visit localhost:3000
+3. Visit http://localhost:3000
 
 ### Some of the existing endpoints
 - GET http://localhost:3000

@@ -4,4 +4,5 @@ ruby '3.2.2'
 gem 'sinatra'
 gem 'json'
 gem 'puma'
-
+gem 'net-sftp'
+gem 'pry'

@@ -33,6 +33,7 @@ export AUTHORIZATION_TOKEN='token-authorization'
 
 ### Architecture
 ```
+.
 ├── Gemfile
 ├── Gemfile.lock
 ├── README.md
@@ -41,6 +42,7 @@ export AUTHORIZATION_TOKEN='token-authorization'
 │   └── puma.rb
 ├── config.ru
 └── controllers
+    ├── authorized_controller.rb
     ├── base_controller.rb
     ├── invoices_controller.rb
     ├── patients_controller.rb

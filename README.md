@@ -9,7 +9,7 @@ We implemented a very basic Authorization layer, which is basically an env varia
 ```
 export AUTHORIZATION_TOKEN='token-authorization'
 ```
-Currently, the root path is not using the authorization layer but the invoices controller, thus, if you want to make a POST request to create a new invoice, make sure you include this authorization header in your request.
+At present, the root path (/) bypasses the authorization layer. However, both the 'invoices' and 'patients' controllers do utilize it. Therefore, when making a POST request to create a new invoice, ensure that you include the appropriate authorization header in your request.
 ```
 Authorization: token-authorization 
 ```
@@ -24,8 +24,11 @@ export AUTHORIZATION_TOKEN='token-authorization'
 4. Visit http://localhost:3000
 
 ### Some of the existing endpoints
+#### Public endpoint
 - GET http://localhost:3000
-- POST http://localhost:3000/api/v1/invoices/process
+
+#### Authenticated endpoints:
+- POST http://localhost:3000/api/v1/invoices
 - GET http://localhost:3000/api/v1/patients
 
 ### Architecture

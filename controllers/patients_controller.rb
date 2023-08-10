@@ -1,6 +1,6 @@
-require './controllers/base_controller'
+require './controllers/authorized_controller'
 
-class PatientsController < BaseController
+class PatientsController < AuthorizedController
   get '' do
     { status: '/ index patients route' }.to_json
   end

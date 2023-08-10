@@ -1,11 +1,8 @@
 require 'pry'
-require './controllers/base_controller'
+require './controllers/authorized_controller'
 
-class InvoicesController < BaseController
-
-  post '/process' do
-    # Net::SFTP.start goes here
-    puts "here we go...."
+class InvoicesController < AuthorizedController
+  post '' do
     { status: 'this would be a post request' }.to_json
   end
 

@@ -6,11 +6,11 @@ class AuthorizedController < BaseController
   end
 
   def authorize!
-    render_authorization_error if valid_authorization_request?
+    render_authorization_error unless valid_authorization_request?
   end
 
   def valid_authorization_request?
-    request.env['HTTP_AUTHORIZATION_TOKEN'] == ENV['AUTHORIZATION_TOKEN']
+    request.env['HTTP_AUTHORIZATION'] == ENV['AUTHORIZATION_TOKEN']
   end
 
   def render_authorization_error

@@ -9,6 +9,23 @@ By following this [official Sinatra page](https://sinatrarb.com/intro.html)
 
 And the application uses the `rerun` gem to allow quick reloads when any of the Ruby files are modified
 
+```
+.
+├── Gemfile
+├── Gemfile.lock
+├── README.md
+├── app.rb
+├── config
+│   └── puma.rb
+├── config.ru
+└── controllers
+    ├── authorized_controller.rb
+    ├── base_controller.rb
+    ├── invoices_controller.rb
+    ├── patients_controller.rb
+    └── versions_controller.rb
+```
+
 ### Dependencies
 - Rerun
 - Sinatra
@@ -44,21 +61,3 @@ rerun --pattern="**/*.{rb}" "bundle exec puma -C config/puma.rb"
 #### Authenticated endpoints:
 - POST http://localhost:3000/api/v1/invoices
 - GET http://localhost:3000/api/v1/patients
-
-### Architecture
-```
-.
-├── Gemfile
-├── Gemfile.lock
-├── README.md
-├── app.rb
-├── config
-│   └── puma.rb
-├── config.ru
-└── controllers
-    ├── authorized_controller.rb
-    ├── base_controller.rb
-    ├── invoices_controller.rb
-    ├── patients_controller.rb
-    └── versions_controller.rb
-```

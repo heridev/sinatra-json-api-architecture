@@ -6,3 +6,7 @@ gem 'json'
 gem 'puma'
 gem 'net-sftp'
 gem 'pry'
+
+group :development, :test do
+  gem 'rerun'
+end

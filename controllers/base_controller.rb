@@ -1,4 +1,8 @@
 class BaseController < Sinatra::Base
+  configure :production, :development do
+    enable :logging
+  end
+
   before do
     content_type :json
   end

@@ -1,5 +1,16 @@
 ## Sinatra JSON API architecture
+This Sinatra architecture uses the Modular application style, which means that the app_file uses the Sinatra::Base for subclassing, if you want to enable or disable any settings, please do so using the BaseController.
+
+For more information please visit the section called
+```
+Modular vs. Classic Style
+```
+By following this [official Sinatra page](https://sinatrarb.com/intro.html)
+
+And the application uses the `rerun` gem to allow quick reloads when any of the Ruby files are modified
+
 ### Dependencies
+- Rerun
 - Sinatra
 - Ruby 3.2.2
 - Puma
@@ -20,7 +31,10 @@ Authorization: token-authorization
 ```
 export AUTHORIZATION_TOKEN='token-authorization'
 ```
-3. bundle exec puma -C config/puma.rb
+3. Run the application for development
+```
+rerun --pattern="**/*.{rb}" "bundle exec puma -C config/puma.rb"
+```
 4. Visit http://localhost:3000
 
 ### Some of the existing endpoints
